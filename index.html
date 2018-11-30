@@ -6,10 +6,13 @@
         }
     </style>
     <body>
+        <button type="button" id="pauseBtn">stuff</button>
         <script>
 var TRACKS = 12;
 var song = new Audio();
-document.createElement("button");
+document.getElementById("pauseBtn").onclick = function() {
+  song.pause();
+};
 
 for (var i = 1; i <= TRACKS; ++i) {
     var button = document.createElement("button");
