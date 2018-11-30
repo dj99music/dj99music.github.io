@@ -9,15 +9,16 @@
         <script>
 var TRACKS = 12;
 var song = new Audio();
+document.createElement("button");
 
-for (var i = 1; i <= 12; ++i) {
+for (var i = 1; i <= TRACKS; ++i) {
     var button = document.createElement("button");
     button.type = "button";
     button.innerHTML = "Song " + i;
     (function(i) {
         button.onclick = function() {
             song.pause();
-            song.src = "mixtapes/track" + i + ".mp3";
+            song.src = "./mixtapes/track" + i + ".mp3";
             song.play();
         };
     })(i);
